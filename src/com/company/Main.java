@@ -26,7 +26,7 @@ public class Main {
                 .distinct()
                 .sorted()
                 .limit(4)
-                .collect(Collectors.toMap((p) -> p, (p) -> boys.stream().filter(a -> a.getName().equals(p)).count()));
+                .collect(Collectors.toMap((p) -> p, (p) -> boys.stream().filter(a -> a.getName().equals(p)).count() - 1));
         System.out.println(filtered);
     }
 }
